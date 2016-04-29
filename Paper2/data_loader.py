@@ -10,11 +10,10 @@ logger = logging.getLogger(__name__)
 
 
 def launch(args, others):
-    print('Hello world : data_cleaning')
+    print('Hello world : data_loader')
 
 
 def parser(parent_parser):
-    parser = parent_parser.add_parser('data_cleaning', help='data cleaning command help', aliases=['dc'])
-    parser.add_argument('--data_source', default=config.__DEFAULT_DATA__, type=str, help='class to obtain data')
+    parser = parent_parser.add_parser('data_loader', help='data loader command help', aliases=['dl'])
     parser.set_defaults(action=launch)
     return parser
